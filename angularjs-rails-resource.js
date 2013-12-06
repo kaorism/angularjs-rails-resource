@@ -1,6 +1,6 @@
 /**
  * A resource factory inspired by $resource from AngularJS
- * @version v1.0.0-pre.2 - 2013-11-24
+ * @version v1.0.0-pre.2 - 2013-12-06
  * @link https://github.com/FineLinePrototyping/angularjs-rails-resource.git
  * @author 
  */
@@ -965,7 +965,7 @@
                     var params;
 
                     if (this.config.defaultParams) {
-                        params = this.config.defaultParams;
+                        params = angular.copy(this.config.defaultParams);
                     }
 
                     if (angular.isObject(queryParams)) {
